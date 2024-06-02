@@ -2,6 +2,7 @@
 - name: Demo hostname configuration playbook
   hosts: vagrant,localhost,all
   become: true
+  become_user: root
   gather_facts: false
 
   tasks:
