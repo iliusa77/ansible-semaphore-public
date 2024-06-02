@@ -1,13 +1,14 @@
 ---
-- name: Package playbook
+- name: Apt playbook
   hosts: vagrant,localhost,all
   become: true
   #become_user: vagrant
   gather_facts: false
 
   tasks:
-    - name: Packages installation
-      ansible.builtin.package:
+    - name: Apt packages installation
+      ansible.builtin.apt:
         name: 
           - "nginx"
         state: latest
+        update_cache: true
