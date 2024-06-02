@@ -2,10 +2,11 @@
 - name: Demo hostname configuration playbook
   hosts: vagrant,localhost,all
   become: true
-  become_user: root
+  become_user: vagrant
   gather_facts: false
 
   tasks:
     - name: Hostname setup
+      
       hostname:
         name: "{{ hostname }}"
