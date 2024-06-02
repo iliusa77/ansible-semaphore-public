@@ -1,0 +1,10 @@
+---
+- name: Demo hostname configuration playbook
+  hosts: vagrant
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Hostname setup
+      hostname:
+       - name: "vagrant-ansible-semaphore"
