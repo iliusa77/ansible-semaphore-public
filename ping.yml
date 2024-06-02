@@ -1,6 +1,7 @@
 ---
 - name: Demo ping playbook
   hosts: vagrant,localhost,all
+  become: true
 
   tasks:
     - name: Ping server
