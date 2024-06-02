@@ -7,4 +7,4 @@
   tasks:
     - name: Hostname setup
       hostname:
-       - name: "vagrant-ansible-semaphore"
+       - name: "{{ hostname }}"
