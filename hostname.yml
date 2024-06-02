@@ -1,6 +1,6 @@
 ---
 - name: Demo hostname configuration playbook
-  hosts: vagrant
+  hosts: vagrant,localhost,all
   become: true
   gather_facts: false
 
