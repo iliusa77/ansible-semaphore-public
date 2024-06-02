@@ -1,0 +1,13 @@
+---
+- name: Package playbook
+  hosts: vagrant,localhost,all
+  become: true
+  #become_user: vagrant
+  gather_facts: false
+
+  tasks:
+    - name: Packages installation
+      ansible.builtin.package:
+        name: 
+          - "nginx"
+        state: latest

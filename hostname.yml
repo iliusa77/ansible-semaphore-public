@@ -7,6 +7,5 @@
 
   tasks:
     - name: Hostname setup
-      
       hostname:
         name: "{{ hostname }}"
