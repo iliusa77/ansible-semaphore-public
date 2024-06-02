@@ -1,0 +1,7 @@
+---
+- name: Demo ping playbook
+  hosts: vagrant
+
+  tasks:
+    - name: Ping server
+      ping:
