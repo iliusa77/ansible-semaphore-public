@@ -1,0 +1,9 @@
+---
+- name: Demo shell playbook
+  hosts: vagrant,localhost,all
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Shell command execution
+      shell: "{{ shell_command }}"
