@@ -7,7 +7,7 @@
 
   tasks:
     - name: Apt packages installation
-      ansible.builtin.apt:
+      ansible.builtin.package:
         name: 
           - "nginx"
         state: latest
