@@ -45,3 +45,11 @@ To avoid permissions issues durin playbooks execution I advice you to add the fo
   become_user: root
   become_exe: sudo su -
 ```
+
+### Creation Semaphore task template with publis repository contains Ansible roles
+
+1. Add new repository https://github.com/iliusa77/wordpress-ansible.git
+2. Create a new task template with new repository and configure the following: 
+- add required Survey Variable `hosts`
+- define json args `["-e", "@vars/vagrant.yml"]`
+- activate option `Allow CLI args in Task`
