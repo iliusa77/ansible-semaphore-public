@@ -10,3 +10,4 @@
   tasks:
     - name: Ping server
       ping:
+      when: hosts is defined 

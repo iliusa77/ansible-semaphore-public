@@ -10,3 +10,4 @@
   tasks:
     - name: Shell command execution
       shell: "{{ shell_command }}"
+      when: hosts is defined 

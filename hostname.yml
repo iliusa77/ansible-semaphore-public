@@ -11,3 +11,4 @@
     - name: Hostname setup
       hostname:
         name: "{{ hostname }}"
+      when: hosts is defined 
