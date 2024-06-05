@@ -17,7 +17,7 @@
           - pwgen 
         state: latest
         update_cache: true
-        when: common_packages is defined 
+      when: common_packages is defined 
 
     - name: LAMP packages installation
       ansible.builtin.package:
@@ -29,4 +29,4 @@
           - mysql-client
         state: latest
         update_cache: true
-        when: lamp_packages is defined 
+      when: lamp_packages is defined 
