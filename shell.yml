@@ -3,6 +3,8 @@
   hosts: vagrant,localhost,all
   become: true
   become_method: su
+  become_user: root
+  become_exe: sudo su -
   gather_facts: false
 
   tasks:
