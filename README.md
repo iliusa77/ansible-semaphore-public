@@ -38,7 +38,7 @@ example
 ```
 5. Add tasks templates in `http://<ip>:3000/project/1/templates`
 
-To avoid permissions issues durin playbooks execution I advice you to add the following section in Ansible playbooks:
+To avoid permissions issues during playbooks execution I advice you to add the following section in Ansible playbooks:
 ```
   become: true
   become_method: su
@@ -46,7 +46,7 @@ To avoid permissions issues durin playbooks execution I advice you to add the fo
   become_exe: sudo su -
 ```
 
-### Creation Semaphore task template with publis repository contains Ansible roles
+### Creation Semaphore task template with public repository contains Ansible roles
 
 1. Add new repository https://github.com/iliusa77/wordpress-ansible.git
 2. Create a new task template with new repository and configure the following: 
