@@ -1,14 +1,20 @@
 ---
-- name: Apt playbook
-  hosts: vagrant,localhost,all
+- name: Packages installation playbook
+  hosts: "{{ hosts }}"
   become: true
-  #become_user: vagrant
+  become_method: su
+  become_user: root
+  become_exe: sudo su -
   gather_facts: false
 
   tasks:
     - name: Apt packages installation
       ansible.builtin.package:
         name: 
-          - "nginx"
+          - nginx
+          - php
+          - php-fpm
+          - mysql-server
+          - mysql-client
         state: latest
         update_cache: true

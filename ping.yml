@@ -1,7 +1,10 @@
 ---
 - name: Demo ping playbook
-  hosts: vagrant,localhost,all
+  hosts: "{{ hosts }}"
   become: true
+  become_method: su
+  become_user: root
+  become_exe: sudo su -
   gather_facts: false
 
   tasks:

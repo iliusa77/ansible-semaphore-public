@@ -1,8 +1,10 @@
 ---
 - name: Demo hostname configuration playbook
-  hosts: vagrant,localhost,all
+  hosts: "{{ hosts }}"
   become: true
-  become_user: vagrant
+  become_method: su
+  become_user: root
+  become_exe: sudo su -
   gather_facts: false
 
   tasks:
